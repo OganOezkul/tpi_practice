@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="tpiPracticeGUI.Controls.messageUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:tpiPracticeGUI.Controls"
+             mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
+             Background="LightGray"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="61*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="555*"/>
+                <ColumnDefinition Width="107*"/>
+                <ColumnDefinition Width="138*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="usernameLabel" Content="User" VerticalContentAlignment="Center" FontSize="30" Margin="20,0,0,0" />
+            <Image x:Name="editionButton" Source="/Assets/Icons/edit.png" Grid.Column="1" MouseUp="editionButton_MouseUp" />
+            <Image x:Name="removeButton" Source="/Assets/Icons/delete.png" Grid.Column="2" MouseUp="removeButton_MouseUp" />
+        </Grid>
+        <ScrollViewer Grid.Row="1" Margin="30,30,30,30">
+            <TextBlock x:Name="messageContentTextBlock" TextWrapping="Wrap" FontSize="20" Background="DarkGray" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales, nulla sit amet pretium laoreet, elit arcu auctor justo, quis elementum metus elit id tellus. Aenean semper lacus ac faucibus pharetra. Proin eleifend rhoncus aliquam. Suspendisse id finibus nibh, ut tristique turpis. Morbi pulvinar augue vitae malesuada porta. Praesent commodo, nulla sed consequat posuere, odio tortor varius ex, et ultrices magna libero nec arcu. Praesent nec ipsum id nulla vestibulum gravida. Suspendisse sollicitudin est magna, non malesuada ipsum laoreet eu. Nulla eu dui odio. Praesent id elit ullamcorper, auctor sem non, tempor felis. Ut nec enim dolor. Vivamus eleifend lobortis justo eget fringilla. Nam dignissim turpis magna, aliquam scelerisque ex volutpat vulputate. Morbi ut nulla vitae velit ultricies aliquam vel a orci. Aenean gravida lobortis velit, vitae imperdiet tortor auctor a. " Padding="20,20,20,20" />
+        </ScrollViewer>
+    </Grid>
+</UserControl>

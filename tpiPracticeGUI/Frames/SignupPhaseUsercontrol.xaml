@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="tpiPracticeGUI.Frames.SignupPhaseUsercontrol"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:tpiPracticeGUI.Frames"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140*"/>
+            <RowDefinition Height="249*"/>
+            <RowDefinition Height="61*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Créer un compte" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="70" Height="104" Width="528"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBox x:Name="usernameTextbox" Grid.Row="0" TextChanged="usernameTextbox_TextChanged" />
+                <Label x:Name="usernamePlaceholderLabel" Grid.Row="0" Content="Nom d'utilisateur" Foreground="LightGray" IsHitTestVisible="False" />
+                <TextBox x:Name="emailTextbox" Grid.Row="2" TextChanged="emailTextbox_TextChanged" />
+                <Label x:Name="emailPlaceholderLabel" Grid.Row="2" Content="Adresse email" Foreground="LightGray" IsHitTestVisible="False" />
+                <PasswordBox x:Name="passwordTextbox" Grid.Row="4" PasswordChanged="passwordTextbox_PasswordChanged" />
+                <Label x:Name="passwordPlaceholderLabel" Grid.Row="4" Content="Mot de passe" Foreground="LightGray" IsHitTestVisible="False" />
+                <PasswordBox x:Name="passwordConfirmationTextbox" Grid.Row="6" PasswordChanged="passwordConfirmationTextbox_PasswordChanged" />
+                <Label x:Name="passwordConfirmationPlaceholderLabel" Grid.Row="6" Content="Confirmer votre mot de passe" Foreground="LightGray" IsHitTestVisible="False" />
+                <Button x:Name="connectionButton" Grid.Row="7" HorizontalAlignment="Center" Margin="0,26,0,0" Grid.RowSpan="2" Width="127" Content="Créer un compte" Click="connectionButton_Click" />
+            </Grid>
+        </Grid>
+        <Label Content="Vous avez un compte? Connectez - vous" Grid.Row="2" Margin="0,0,10,0" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseDown="Label_MouseDown" Height="26" VerticalAlignment="Center" HorizontalAlignment="Right" Width="233"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="tpiPracticeGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tpiPracticeGUI"
+        xmlns:frames="clr-namespace:tpiPracticeGUI.Frames"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="mainFrame">
+        <frames:LoginPhaseUsercontrol x:Name="loginGUI" Visibility="Visible"/>
+        <frames:SignupPhaseUsercontrol x:Name="signupGUI" Visibility="Collapsed" />
+        <frames:GroupchatListUserControl x:Name="groupchatListingGUI" Visibility="Collapsed" />
+        <frames:chatRoomUSercontrol x:Name="chattingUsercontrol" Visibility="Collapsed" />
+    </Grid>
+</Window>

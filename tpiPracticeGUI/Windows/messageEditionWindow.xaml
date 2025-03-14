@@ -1,0 +1,29 @@
+﻿<Window x:Class="tpiPracticeGUI.Windows.messageEditionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tpiPracticeGUI.Windows"
+        mc:Ignorable="d"
+        Title="Modifier un message" Height="189" Width="440">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="465*"/>
+            <ColumnDefinition Width="68*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Modifier un message" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <TextBox x:Name="newContentTextbox" TextChanged="newContentTextbox_TextChanged" Grid.Row="2" />
+            <Button x:Name="submissionButton" Content="Ok" Grid.Row="4" IsEnabled="False" Click="submissionButton_Click" />
+        </Grid>
+    </Grid>
+</Window>
